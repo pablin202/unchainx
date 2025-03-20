@@ -22,3 +22,5 @@ dependencyResolutionManagement {
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 rootProject.name = "UnchainX"
 include(":app")
+include(":designsystems")
+include(":feature:main:presentation")
