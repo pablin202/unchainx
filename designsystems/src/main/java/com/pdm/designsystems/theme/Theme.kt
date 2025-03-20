@@ -58,7 +58,7 @@ fun UnchainXTheme(
 
     CompositionLocalProvider(
         LocalDimensions provides Dimensions(),
-        LocalShapes provides Shapes(),
+        LocalShapes provides Shapes()
     ) {
         MaterialTheme(
             colorScheme = colorScheme,

@@ -12,7 +12,9 @@ import com.pdm.designsystems.theme.UnchainXTheme
 
 @Composable
 fun PreviewSurface(content: @Composable () -> Unit) {
-    UnchainXTheme {
+    UnchainXTheme(
+        dynamicColor = false
+    ) {
         Surface(modifier = Modifier.fillMaxSize()) {
             Column(
                 verticalArrangement = Arrangement.spacedBy(16.dp),

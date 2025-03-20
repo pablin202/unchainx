@@ -20,10 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun MessageBanner(
-    message: String,
-    messageType: MessageType
-) {
+fun MessageBanner(message: String, messageType: MessageType) {
     val backgroundColor = when (messageType) {
         MessageType.Error -> MaterialTheme.colorScheme.errorContainer
         MessageType.Success -> Color(0xFF4BDC9E)
