@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+import "com/pdm/storage/data/theme.proto";
+import "com/pdm/storage/data/onboarding_status.proto";
+import "com/pdm/storage/data/wallet_backup_status.proto";
+
+option java_package = "com.pdm.storage.datastore.data";
+option java_multiple_files = true;
+
+message UserPreferences {
+  Theme theme = 1;
+  OnboardingStatus onboardingStatus = 2;
+  WalletBackupStatus wallet_backup_status = 3;
+  bool is_wallet_unlocked = 4;
+  bool has_user_completed_setup = 5;
+  bool biometric_auth_enabled = 6;
+  string default_currency = 7;
+  bool selected_fiat_to_crypto_conversion = 8;
+  string last_copied_address = 9;
+  bool is_notifications_enabled = 10;
+  bool transaction_alerts_enabled = 11;
+  int64 last_sync_timestamp = 12;
+}

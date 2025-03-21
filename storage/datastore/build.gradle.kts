@@ -1,11 +1,11 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.protobuf)
 }
 
 android {
-    namespace = "com.pdm.designsystems"
+    namespace = "com.pdm.storage.datastore"
     compileSdk = 35
 
     defaultConfig {
@@ -33,23 +33,27 @@ android {
     }
 }
 
+protobuf {
+    protoc {
+        artifact = libs.protobuf.protoc.get().toString()
+    }
+    generateProtoTasks {
+        all().forEach { task ->
+            task.builtins {
+                val java by registering { option("lite") }
+                val kotlin by registering { option("lite") }
+            }
+        }
+    }
+}
+
 dependencies {
-
+    api(libs.androidx.datastore.core)
+    api(libs.androidx.datastore)
     api(libs.androidx.core.ktx)
-    api(libs.androidx.appcompat)
-    api(platform(libs.androidx.compose.bom))
-    api(libs.androidx.ui.tooling.preview)
-    api(libs.androidx.material3)
-
-    debugImplementation(libs.ui.tooling)
-    implementation(libs.lottie.compose)
-
-    api(libs.material.icons.extended)
+    api(platform(libs.koin.bom))
+    api(libs.koin.android)
+    api(libs.koin.core)
+    api(libs.protobuf.kotlin.lite)
     api(projects.common.model)
-
-    implementation(libs.coil.compose)
-    implementation(libs.coil.network.okhttp)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 }

@@ -24,3 +24,8 @@ rootProject.name = "UnchainX"
 include(":app")
 include(":designsystems")
 include(":feature:main:presentation")
+include(":storage:datastore")
+include(":common:model")
+include(":feature:onboarding:presentation")
+include(":feature:onboarding:domain")
+include(":feature:onboarding:data")

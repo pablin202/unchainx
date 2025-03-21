@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.pdm.designsystems"
+    namespace = "com.pdm.onboarding.presentation"
     compileSdk = 35
 
     defaultConfig {
@@ -35,20 +35,17 @@ android {
 
 dependencies {
 
-    api(libs.androidx.core.ktx)
-    api(libs.androidx.appcompat)
-    api(platform(libs.androidx.compose.bom))
-    api(libs.androidx.ui.tooling.preview)
-    api(libs.androidx.material3)
-
+    implementation(projects.feature.onboarding.domain)
+    implementation(projects.designsystems)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.ui.tooling.preview)
     debugImplementation(libs.ui.tooling)
-    implementation(libs.lottie.compose)
-
-    api(libs.material.icons.extended)
-    api(projects.common.model)
-
-    implementation(libs.coil.compose)
-    implementation(libs.coil.network.okhttp)
+    implementation(libs.material)
+    implementation(platform(libs.koin.bom))
+    implementation(libs.koin.android)
+    implementation(libs.koin.compose)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

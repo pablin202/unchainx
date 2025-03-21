@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="welcome_get_started">Get Started</string>
+
+    <string-array name="onboarding_title">
+        <item>Welcome To\nUnchainX</item>
+        <item>Transaction\nSecurity</item>
+        <item>Fast And Reliable\nMarket Updated</item>
+    </string-array>
+</resources>

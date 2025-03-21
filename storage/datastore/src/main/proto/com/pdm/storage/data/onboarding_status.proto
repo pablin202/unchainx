@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option java_package = "com.pdm.storage.datastore.data";
+option java_multiple_files = true;
+
+enum OnboardingStatus {
+  NOT_STARTED = 0;
+  COMPLETED = 1;
+}

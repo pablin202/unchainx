@@ -11,10 +11,18 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/common/model" />
             <option value="$PROJECT_DIR$/designsystems" />
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/main" />
             <option value="$PROJECT_DIR$/feature/main/presentation" />
+            <option value="$PROJECT_DIR$/feature/onboarding" />
+            <option value="$PROJECT_DIR$/feature/onboarding/data" />
+            <option value="$PROJECT_DIR$/feature/onboarding/domain" />
+            <option value="$PROJECT_DIR$/feature/onboarding/presentation" />
+            <option value="$PROJECT_DIR$/storage" />
+            <option value="$PROJECT_DIR$/storage/datastore" />
           </set>
         </option>
       </GradleProjectSettings>
