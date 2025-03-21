@@ -40,9 +40,9 @@ fun IntroductionScreen(onNextScreen: () -> Unit, viewModel: OnBoardingViewModel 
 @Composable
 private fun OnBoarding(onNextScreen: () -> Unit, dispatch: (Event) -> Unit) {
     val images = listOf(
-        R.drawable.onboarding_image_1,
-        R.drawable.onboarding_image_2,
-        R.drawable.onboarding_image_3
+        R.drawable.onboarding_image_4,
+        R.drawable.onboarding_image_6,
+        R.drawable.onboarding_image_5
     )
 
     Column(
