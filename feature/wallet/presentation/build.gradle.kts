@@ -2,12 +2,10 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.kotlin.serialization)
-    id("kotlin-parcelize")
 }
 
 android {
-    namespace = "com.pdm.main.presentation"
+    namespace = "com.pdm.wallet.presentation"
     compileSdk = 35
 
     defaultConfig {
@@ -36,10 +34,6 @@ android {
 }
 
 dependencies {
-
-    implementation(projects.feature.main.domain)
-    implementation(projects.feature.onboarding.presentation)
-    implementation(projects.feature.wallet.presentation)
     implementation(projects.designsystems)
     // Libraries
     implementation(libs.androidx.core.ktx)

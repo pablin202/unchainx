@@ -1,21 +1,17 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
 }
 
 android {
-    namespace = "com.pdm.unchainx"
+    namespace = "com.pdm.main.domain"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.pdm.unchainx"
         minSdk = 26
-        targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -34,16 +30,9 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-    buildFeatures {
-        compose = true
-    }
 }
 
 dependencies {
-    implementation(projects.feature.main.presentation)
-    implementation(projects.feature.onboarding.data)
-    implementation(projects.feature.main.data)
-    implementation(platform(libs.koin.bom))
-    implementation(libs.koin.android)
-    api(libs.androidx.compose.runtime)
+    api(projects.common.model)
+    implementation(libs.androidx.core.ktx)
 }

@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="next">Next</string>
-    <string name="skip">Skip</string>
-    <string name="welcome_get_started">Get Started</string>
     <string name="import_wallet">Import existing wallet</string>
     <string name="create_wallet">Create a new wallet</string>
     <string name="on_start_title">One wallet for all\nyour crypto</string>
     <string name="term_of_use_title">"By continuing, your agree with our Term of Use "</string>
     <string name="term_of_use">Term of Use</string>
-
-    <string-array name="onboarding_title">
-        <item>Welcome To\nUnchainX</item>
-        <item>Transaction\nSecurity</item>
-        <item>Fast And Reliable\nMarket Updated</item>
-    </string-array>
 </resources>
