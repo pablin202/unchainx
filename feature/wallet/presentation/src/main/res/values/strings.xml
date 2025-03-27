@@ -5,4 +5,15 @@
     <string name="on_start_title">One wallet for all\nyour crypto</string>
     <string name="term_of_use_title">"By continuing, your agree with our Term of Use "</string>
     <string name="term_of_use">Term of Use</string>
+    <string name="verify_wallet">Verify Wallet Seed</string>
+    <string name="reset">Reset</string>
+    <string name="back">Back</string>
+    <string name="verify_seed_title">Verify your seed</string>
+    <string name="seed_incorrect_error_message">The seed phrase is incorrect. Please try again.</string>
+    <string name="tab_word_in_order_label">Tap on the words in the correct order:</string>
+    <string name="selected_word_label">Selected Words:</string>
+    <string name="your_seed_title">Your seed</string>
+    <string name="your_recovery_phase_title">Your recovery phase</string>
+    <string name="your_recovery_phase_subtitle">Write down or copy these words in the\nright order and save them somewhere safe.</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
 </resources>

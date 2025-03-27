@@ -43,6 +43,7 @@ dependencies {
     implementation(projects.feature.main.presentation)
     implementation(projects.feature.onboarding.data)
     implementation(projects.feature.main.data)
+    implementation(projects.feature.wallet.data)
     implementation(platform(libs.koin.bom))
     implementation(libs.koin.android)
     api(libs.androidx.compose.runtime)

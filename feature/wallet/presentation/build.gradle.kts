@@ -35,6 +35,7 @@ android {
 
 dependencies {
     implementation(projects.designsystems)
+    implementation(projects.feature.wallet.domain)
     // Libraries
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

@@ -20,7 +20,7 @@ fun UxText(text: String, textType: TextType, textAlign: TextAlign = TextAlign.Le
 }
 
 @Composable
-fun UxText(text: AnnotatedString, textType: TextType, textAlign: TextAlign = TextAlign.Left, modifier: Modifier = Modifier) {
+fun UxText(modifier: Modifier = Modifier, text: AnnotatedString, textType: TextType, textAlign: TextAlign = TextAlign.Left) {
     Text(
         modifier = modifier,
         text = text,

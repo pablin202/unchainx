@@ -29,9 +29,11 @@ import com.pdm.designsystems.theme.LocalDimensions
 import com.pdm.wallet.presentation.R
 
 @Composable
-fun StartScreen(onImportWallet: () -> Unit) {
-    OnStart({
-    }, onImportWallet)
+fun StartScreen(onCreateNewWallet: () -> Unit, onImportWallet: () -> Unit) {
+    OnStart(
+        onCreateNewWallet,
+        onImportWallet
+    )
 }
 
 @Composable
@@ -101,6 +103,11 @@ private fun OnStart(onCreateNewWallet: () -> Unit, onImportWallet: () -> Unit) {
         )
 
         UxText(
+            modifier = Modifier
+                .padding(
+                    top = LocalDimensions.current.dimensions48,
+                    start = LocalDimensions.current.dimensions16
+                ),
             text = createAnnotatedString(
                 fullText = stringResource(R.string.term_of_use_title),
                 spans = listOf(
@@ -113,12 +120,7 @@ private fun OnStart(onCreateNewWallet: () -> Unit, onImportWallet: () -> Unit) {
                     }
                 )
             ),
-            TextType.LABEL_SMALL,
-            modifier = Modifier
-                .padding(
-                    top = LocalDimensions.current.dimensions48,
-                    start = LocalDimensions.current.dimensions16
-                )
+            textType = TextType.LABEL_SMALL
         )
 
         Spacer(

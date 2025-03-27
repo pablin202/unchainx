@@ -21,7 +21,10 @@ sealed interface Destinations {
     data object Start : Destinations
 
     @Serializable
-    data object ImportWallet : Destinations
+    data object CreateWallet : Destinations
+
+    @Serializable
+    data class VerifySeed(val seed: List<String>) : Destinations
 
     @Serializable
     data object Home : Destinations
