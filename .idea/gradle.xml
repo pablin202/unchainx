@@ -31,6 +31,7 @@
             <option value="$PROJECT_DIR$/feature/wallet/presentation" />
             <option value="$PROJECT_DIR$/storage" />
             <option value="$PROJECT_DIR$/storage/datastore" />
+            <option value="$PROJECT_DIR$/storage/preferences" />
           </set>
         </option>
       </GradleProjectSettings>

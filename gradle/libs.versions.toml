@@ -30,6 +30,7 @@ materialIconsExtended = "1.7.8"
 ksp = "2.0.21-1.0.27"
 coilCompose = "3.1.0"
 web3j = "5.0.0"
+securityCryptoKtx = "1.1.0-alpha06"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -78,6 +79,7 @@ coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coilCo
 coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coilCompose" }
 bitcoinj = { module = "org.bitcoinj:bitcoinj-core", version.ref = "credentials" }
 web3j = { module = "org.web3j:core", version.ref = "web3j" }
+androidx-security-crypto-ktx = { module = "androidx.security:security-crypto-ktx", version.ref = "securityCryptoKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

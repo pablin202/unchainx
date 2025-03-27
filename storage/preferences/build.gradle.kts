@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.pdm.wallet.data"
+    namespace = "com.pdm.storage.preferences"
     compileSdk = 35
 
     defaultConfig {
@@ -19,7 +19,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro",
+                "proguard-rules.pro"
             )
         }
     }
@@ -33,9 +33,9 @@ android {
 }
 
 dependencies {
-    implementation(projects.crypto.core)
-    implementation(projects.storage.datastore)
-    implementation(projects.storage.preferences)
-    implementation(projects.feature.wallet.domain)
-    implementation(libs.androidx.core.ktx)
+    api(libs.androidx.core.ktx)
+    api(platform(libs.koin.bom))
+    api(libs.koin.android)
+    api(libs.koin.core)
+    implementation(libs.androidx.security.crypto.ktx)
 }

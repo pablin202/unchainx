@@ -34,19 +34,40 @@ import com.pdm.designsystems.theme.LocalDimensions
 import com.pdm.designsystems.utility.UiText
 import com.pdm.wallet.presentation.R
 import com.pdm.wallet.presentation.components.SeedChip
+import com.pdm.wallet.presentation.verifyseed.mvi.Event
+import com.pdm.wallet.presentation.verifyseed.mvi.VerifySeedViewModel
+import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
-fun VerifySeedScreen(seed: List<String>, onVerificationSuccess: () -> Unit, onBack: () -> Unit) {
+fun VerifySeedScreen(
+    viewModel: VerifySeedViewModel = koinViewModel<VerifySeedViewModel>(),
+    seed: List<String>,
+    onVerificationSuccess: () -> Unit,
+    onBack: () -> Unit
+) {
+
+
     VerifySeedContent(
         seed = seed,
-        onVerificationSuccess = onVerificationSuccess,
+        onGetDerivedWallet = { mnemonic, passphrase ->
+            viewModel.event(
+                Event.GetDerivedWallet(
+                    mnemonic = mnemonic,
+                    passphrase = passphrase
+                )
+            )
+        },
         onBack = onBack
     )
 }
 
 @OptIn(ExperimentalLayoutApi::class, ExperimentalMaterial3Api::class)
 @Composable
-private fun VerifySeedContent(seed: List<String>, onVerificationSuccess: () -> Unit, onBack: () -> Unit) {
+private fun VerifySeedContent(
+    seed: List<String>,
+    onGetDerivedWallet: (List<String>, String?) -> Unit,
+    onBack: () -> Unit
+) {
     val context = LocalContext.current
 
     val sheetState = rememberModalBottomSheetState()
@@ -169,7 +190,10 @@ private fun VerifySeedContent(seed: List<String>, onVerificationSuccess: () -> U
                 scope,
                 { passphrase ->
                     showBottomSheet = false
-                    onVerificationSuccess()
+                    onGetDerivedWallet(
+                        seed,
+                        passphrase
+                    )
                 },
                 {
                     showBottomSheet = false
@@ -185,7 +209,7 @@ fun VerifySeedScreenPreview() {
     PreviewSurface {
         VerifySeedContent(
             seed = listOf("word1", "word2", "word3"),
-            onVerificationSuccess = {},
+            onGetDerivedWallet = { _, _ -> },
             onBack = {}
         )
     }

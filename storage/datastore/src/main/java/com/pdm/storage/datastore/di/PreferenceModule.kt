@@ -9,7 +9,7 @@ import com.pdm.storage.datastore.user.UserPreferenceSerializer
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
-val preferenceModule = module {
+val dataStorePreferenceModule = module {
     single { UserPreferenceSerializer() }
     single<DataStore<UserPreferences>> {
         DataStoreFactory.create(

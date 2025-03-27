@@ -35,7 +35,7 @@ class CreateWalletViewModel(
 
     fun event(event: Event) {
         when (event) {
-            Event.CreateWallet -> createMnemonic()
+            Event.CreateSeed -> createMnemonic()
             is Event.CopySeedToClipBoard -> copySeedToClipBoard(
                 event.context
             )

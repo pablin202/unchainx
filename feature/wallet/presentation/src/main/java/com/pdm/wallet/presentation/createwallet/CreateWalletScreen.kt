@@ -42,7 +42,7 @@ fun CreateWalletScreen(
     val state by viewModel.state.collectAsStateWithLifecycle()
 
     LaunchedEffect(key1 = Unit) {
-        viewModel.event(Event.CreateWallet)
+        viewModel.event(Event.CreateSeed)
     }
 
     CreateWalletContent(

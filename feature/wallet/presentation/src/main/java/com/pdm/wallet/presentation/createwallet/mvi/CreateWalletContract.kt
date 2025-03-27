@@ -11,7 +11,7 @@ sealed interface UiState {
 }
 
 sealed interface Event {
-    data object CreateWallet : Event
+    data object CreateSeed : Event
     data class CopySeedToClipBoard(val context: Context) : Event
 }
 
